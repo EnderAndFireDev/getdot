@@ -1,338 +1,304 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dot</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <link rel="icon" type="image/png" href="src/logo.png" sizes="32x32">
-
-    <style data-styled="" data-styled-version="4.2.0">
-      /* sc-component-id: StyledToolbar-sc-1teqk43 */
-      .fGjIPY{position:relative;z-index:100;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:row;-ms-flex-flow:row;flex-flow:row;background-color:#fff;color:rgba(0,0,0,0.8);width:100%;height:38px;-webkit-app-region:drag;margin-top:0px;}
-      /* sc-component-id: StyledBrowserActions-sc-km1qk3 */
-      .iRfaFH{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin-right:2px;}
-      /* sc-component-id: Root-sc-ctco1r */
-      .TLYAv{position:absolute;right:0;bottom:0;left:0;top:0;overflow:hidden;}
-      /* sc-component-id: StyledRipple-sc-1wsoegi */
-      .dOOjEd{position:absolute;border-radius:50%;overflow:hidden;pointer-events:none;will-change:transform;}
-      /* sc-component-id: Icon-sc-1m5gydd */
-      .hDhxiG{width:100%;height:100%;will-change:background-image;-webkit-transition:0.15s background-image;transition:0.15s background-image;background-size:24px 24px;background-position:center;background-repeat:no-repeat;opacity:0.25;background-image:url(/assets/828cb145-back.svg);}.fUoQpp{width:100%;height:100%;will-change:background-image;-webkit-transition:0.15s background-image;transition:0.15s background-image;background-size:24px 24px;background-position:center;background-repeat:no-repeat;opacity:0.25;background-image:url(/assets/90ec0455-forward.svg);}.kGKDWu{width:100%;height:100%;will-change:background-image;-webkit-transition:0.15s background-image;transition:0.15s background-image;background-size:20px 20px;background-position:center;background-repeat:no-repeat;opacity:0.6;background-image:url(/assets/12811d93-refresh.svg);}.bhhcjd{width:100%;height:100%;will-change:background-image;-webkit-transition:0.15s background-image;transition:0.15s background-image;background-size:20px 20px;background-position:center;background-repeat:no-repeat;opacity:0.6;background-image:url(/assets/90e239cf-add.svg);}
-      /* sc-component-id: Button-sc-1b671ox */
-      .bhGwIG{height:100%;-webkit-app-region:no-drag;position:relative;-webkit-transition:0.2s background-color;transition:0.2s background-color;width:36px;pointer-events:none;}.GGuaa{height:100%;-webkit-app-region:no-drag;position:relative;-webkit-transition:0.2s background-color;transition:0.2s background-color;width:36px;pointer-events:auto;}
-      /* sc-component-id: Circle-sc-21zarx */
-      .hNQHHr{border-radius:50%;width:32px;height:32px;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);overflow:hidden;-webkit-transition:0.2s background-color;transition:0.2s background-color;} .hNQHHr:hover{background-color:rgba(0,0,0,0.06);}
-      /* sc-component-id: StyledContainer-sc-1kk26ow */
-      .hrxFwR{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-app-region:no-drag;margin-left:0px;}
-      /* sc-component-id: Root-sc-1pndf25 */
-      .dlWwFP{position:absolute;height:3px;bottom:0;left:0;z-index:10;width:100%;display:none;}
-      /* sc-component-id: Thumb-sc-drzify */
-      .gbvxvJ{position:absolute;background-color:black;height:100%;top:0;left:0;-webkit-transition:0.2s opacity;transition:0.2s opacity;-webkit-app-region:no-drag;opacity:0;} .gbvxvJ:hover{opacity:0.4;} .gbvxvJ:active{opacity:0.4;}
-      /* sc-component-id: StyledTabbar-sc-cw6qg2 */
-      .jOEco{height:100%;width:100%;position:relative;overflow:hidden;-webkit-transition:0.3s opacity,0.3s -webkit-transform;-webkit-transition:0.3s opacity,0.3s transform;transition:0.3s opacity,0.3s transform;margin-left:8px;margin-right:32px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}
-      /* sc-component-id: TabsContainer-sc-1tgrddy */
-      .epBsnq{height:100%;width:calc(100% - 36px);position:relative;overflow:hidden;white-space:nowrap;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
-      /* sc-component-id: AddTab-sc-ngwzeu */
-      .daEebr{position:absolute;left:0;top:0;}
-      /* sc-component-id: StyledPreloader-sc-1lztpab */
-      
-      /* sc-component-id: Path-sc-190rwbv */
-      
-      /* sc-component-id: StyledClose-sc-j86yqq */
-      
-      /* sc-component-id: StyledTab-sc-h00orc */
-      
-      /* sc-component-id: StyledOverlay-sc-huznhq */
-      
-      /* sc-component-id: StyledTitle-sc-15hvn1v */
-      
-      /* sc-component-id: StyledIcon-sc-qgm7mr */
-      
-      /* sc-component-id: StyledContent-sc-1jums98 */
-      
-      /* sc-component-id: StyledBorder-sc-1bi1y44 */
-      
-      /* sc-component-id: TabContainer-sc-1092v0e */
-      
-      /* sc-component-id: StyledBrowserAction-sc-19nmhk3 */
-      
-      /* sc-component-id: Badge-sc-sy033s */
-      
-      /* sc-component-id: StyledOverlay-sc-ltkuoz */
-      .dPbgLL{background-color:rgba(0,0,0,0.9);color:white;position:absolute;left:0;top:0;bottom:0;right:0;z-index:9999;-webkit-transition:0.15s opacity;transition:0.15s opacity;opacity:1;pointer-events:auto;}
-      /* sc-component-id: HeaderText-sc-ellgec */
-      .kgLgFt{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;font-size:16px;padding-left:8px;padding-top:6px;padding-right:24px;padding-bottom:6px;margin-bottom:16px;margin-top:-8px;border-radius:50px;-webkit-transition:0.1s background-color;transition:0.1s background-color;cursor:pointer;pointer-events:none;} .kgLgFt:hover{background-color:rgba(255,255,255,0.1);}
-      /* sc-component-id: HeaderArrow-sc-xri5nu */
-      
-      /* sc-component-id: DropArrow-sc-1h1v2ga */
-      .cCAQuV{background-size:24px 24px;background-position:center;background-repeat:no-repeat;margin-left:8px;height:32px;width:32px;background-image:url(/assets/83f4b81c-down.svg);-webkit-filter:invert(100%);filter:invert(100%);border-radius:50%;-webkit-transition:0.1s background-color;transition:0.1s background-color;}
-      /* sc-component-id: Separator-sc-15a1scr */
-      
-      /* sc-component-id: Section-sc-1a43ipo */
-      .jPAMAW{padding:24px;background-color:rgba(255,255,255,0.12);margin-bottom:24px;border-radius:30px;color:white;overflow:hidden;}
-      /* sc-component-id: Card-sc-1q9oyxq */
-      .igUhGl{background-color:rgba(255,255,255,0.12);margin-bottom:24px;border-radius:30px;color:white;overflow:hidden;width:50%;}
-      /* sc-component-id: WeatherHeader-sc-l81d4o */
-      .bLjmqu{width:100%;padding:24px;background-image:linear-gradient(to bottom right,#2196f3,#64b5f6);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}
-      /* sc-component-id: WeatherTitle-sc-pxzfpk */
-      .dddvMg{font-size:24px;font-weight:300;margin-bottom:8px;}
-      /* sc-component-id: WeatherNumber-sc-werc0f */
-      .cYuwjj{font-size:96px;font-weight:300;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}
-      /* sc-component-id: WeatherSymbol-sc-1mr4l9c */
-      .eXwUYJ{font-size:24px;font-weight:300;margin-top:16px;}
-      /* sc-component-id: WeatherLeft-sc-cjh1go */
-      .fNlgaY{-webkit-flex:1;-ms-flex:1;flex:1;}
-      /* sc-component-id: WeatherIcon-sc-87kukj */
-      .jOzQyy{background-size:96px 96px;background-position:center;background-repeat:no-repeat;width:96px;height:96px;}
-      /* sc-component-id: WeatherContent-sc-75nrf9 */
-      .ciZAsM{padding:24px;}
-      /* sc-component-id: Menu-sc-lwimqj */
-      .kcyIdy{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin-left:-16px;margin-top:-16px;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}
-      
-    </style>
-
-<style type="text/css">
-  #fuse-box-output, #fuse-box-output * {
-      box-sizing: border-box;
-  }
-  #fuse-box-output {
-      z-index: 999999999999;
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      width: 400px;
-      overflow: auto;
-      background: #fdf3f1;
-      border: 1px solid #eca494;
-      border-radius: 5px;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      box-shadow: 0px 3px 6px 1px rgba(0,0,0,.15);
-  }
-  #fuse-box-output.fuse-box-expanded-output {
-      height: auto;
-      width: auto;
-      left: 10px;
-      max-height: calc(100vh - 50px);
-  }
-  #fuse-box-output .fuse-box-errors {
-      display: none;
-  }
-  #fuse-box-output.fuse-box-expanded-output .fuse-box-errors {
-      display: block;
-      border-top: 1px solid #eca494;
-      padding: 0 10px;
-  }
-  #fuse-box-output button {
-      border: 1px solid #eca494;
-      padding: 5px 10px;
-      border-radius: 4px;
-      margin-left: 5px;
-      background-color: white;
-      color: black;
-      box-shadow: 0px 2px 2px 0px rgba(0,0,0,.05);
-  }
-  #fuse-box-output .fuse-box-header {
-      padding: 10px;
-  }
-  #fuse-box-output .fuse-box-header h4 {
-      display: inline-block;
-      margin: 4px;
-  }</style>
-
-<style data-styled="" data-styled-version="4.2.0">
-  /* sc-component-id: Scrollable-sc-js0a41 */
-  .cAykgg{position:absolute;overflow-y:scroll;top:0;left:0;right:0;bottom:0;} .cAykgg::-webkit-scrollbar{display:none;}
-  /* sc-component-id: Title-sc-jxyyul */
-  .zNamw{font-size:24px;margin-left:24px;font-weight:300;margin-bottom:16px;margin-top:24px;color:white;position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;padding-right:42px;} .zNamw:hover .DropArrow-sc-1h1v2ga{background-color:rgba(0,0,0,0.15);}
-  /* sc-component-id: Content-sc-1ijkbd9 */
-  .efijXb{width:calc(100% - 64px);max-width:800px;position:absolute;left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);}
-  /* sc-component-id: StyledSearchBox-sc-13agp0v */
-  .haFJuh{margin-top:64px;z-index:2;background-color:rgba(255,255,255,0.15);border-radius:10px;margin-bottom:32px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;overflow:hidden;min-height:48px;-webkit-transition:0.2s height;transition:0.2s height;}
-  /* sc-component-id: SearchIcon-sc-1u0xww */
-  .WKfmc{background-size:18px 18px;background-position:center;background-repeat:no-repeat;background-image:url(/assets/cc03e00-search.svg);height:18px;-webkit-filter:invert(100%);filter:invert(100%);min-width:18px;margin-left:16px;}
-  /* sc-component-id: Input-sc-1r6vfc1 */
-  .dXebMP{height:100%;-webkit-flex:1;-ms-flex:1;flex:1;background-color:transparent;border:none;outline:none;color:white;font-size:16px;margin-left:12px;} .dXebMP::-webkit-input-placeholder{color:rgba(255,255,255,0.54);} .dXebMP::-moz-placeholder{color:rgba(255,255,255,0.54);} .dXebMP:-ms-input-placeholder{color:rgba(255,255,255,0.54);} .dXebMP::placeholder{color:rgba(255,255,255,0.54);}
-  /* sc-component-id: InputContainer-sc-11y7un3 */
-  .ijFNVd{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:48px;min-height:48px;}
-  /* sc-component-id: StyledSuggestions-sc-um3n1t */
-  .ddRKVk{width:100%;color:rgba(0,0,0,0.87);overflow:hidden;display:none;}
-  /* sc-component-id: StyledSuggestion-sc-1et5qsv */
-  
-  /* sc-component-id: PrimaryText-sc-ygs8km */
-  
-  /* sc-component-id: SecondaryText-sc-1xezlgz */
-  
-  /* sc-component-id: Icon-sc-ixc226 */
-  
-  /* sc-component-id: Dash-sc-1mlw9qf */
-  
-  /* sc-component-id: StyledMenuItem-sc-1pp1ro */
-  .fgJAng{border-radius:5px;margin-top:8px;padding:16px;-webkit-transition:0.1s background-color;transition:0.1s background-color;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;overflow:hidden;} .fgJAng:hover{background-color:rgba(255,255,255,0.08);}
-  /* sc-component-id: Icon-sc-1xpaonh */
-  .cjLhal{opacity:1;width:56px;height:56px;background-color:rgba(0,0,0,0.2);border-radius:50%;margin-bottom:16px;background-size:32px 32px;background-position:center;background-repeat:no-repeat;-webkit-filter:invert(100%);filter:invert(100%);background-color:rgba(0,0,0,0.2);}.bZLorE{opacity:1;width:56px;height:56px;background-color:rgba(0,0,0,0.2);border-radius:50%;margin-bottom:16px;background-size:32px 32px;background-position:center;background-repeat:no-repeat;-webkit-filter:none;filter:none;background-color:rgba(255,255,255,0.2);}
-  /* sc-component-id: Title-sc-1ac98t9 */
-  .gDFUcw{font-size:13px;text-align:center;color:white;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;}
-  /* sc-component-id: StyledTabGroups-sc-1i4mp80 */
-  .hEIijT{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}
-  /* sc-component-id: AddTabGroup-sc-19tm398 */
-  .kXxLLW{width:42px;height:42px;border:1px solid black;opacity:0.54;border-radius:50px;background-size:24px 24px;background-position:center;background-repeat:no-repeat;background-image:url(/assets/90e239cf-add.svg);-webkit-transition:0.1s opacity;transition:0.1s opacity;-webkit-filter:invert(100%);filter:invert(100%);margin-bottom:8px;} .kXxLLW:hover{opacity:1;}
-  /* sc-component-id: StyledTabGroup-sc-rcou9y */
-  .ezqEOT{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:0 16px;height:42px;color:white;border-radius:50px;max-width:200px;margin-right:8px;margin-bottom:8px;-webkit-transition:0.1s opacity;transition:0.1s opacity;opacity:1;box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);} .ezqEOT:hover{opacity:1;cursor:default;}
-  /* sc-component-id: Content-sc-xs0zuy */
-  .eGmQLJ{width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-webkit-flex:1;-ms-flex:1;flex:1;}
-  /* sc-component-id: Icons-sc-sp1y2z */
-  .jjbHsB{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin-left:8px;}
-  /* sc-component-id: Icon-sc-1ieklpg */
-  .fRabqY{background-size:16px 16px;background-position:center;background-repeat:no-repeat;width:16px;height:16px;margin-left:4px;-webkit-filter:invert(100%);filter:invert(100%);opacity:0.54;} .fRabqY:hover{opacity:1;}
-  /* sc-component-id: Input-sc-ep3nph */
-  
-  /* sc-component-id: Line-sc-19rben7 */
-  .brZbdP{background-color:#e5e5e5;height:1px;width:100%;z-index:2;position:relative;}
-  /* sc-component-id: Screenshot-sc-ok9xv */
-  .jgZcZy{background-position:center;background-size:cover;background-repeat:no-repeat;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-filter:blur(20px);filter:blur(20px);margin:-20px;position:relative;}
-  /* sc-component-id: StyledApp-sc-1ohpq7e */
-  .jkrZdW{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;height:100vh;}
-  /* sc-component-id: Button-sc-1krjvyh */
-  .eeUDQr{height:100%;width:45px;min-width:45px;margin-right:1px;position:relative;-webkit-transition:0.2s background-color;transition:0.2s background-color;-webkit-app-region:no-drag;} .eeUDQr:first-child{margin-right:0;} .eeUDQr:hover{background-color:rgba(196,196,196,0.4);}.exhoUW{height:100%;width:45px;min-width:45px;margin-right:1px;position:relative;-webkit-transition:0.2s background-color;transition:0.2s background-color;-webkit-app-region:no-drag;} .exhoUW:first-child{margin-right:0;} .exhoUW:hover{background-color:#e81123;}
-  /* sc-component-id: Icon-sc-fbtszs */
-  .gktNrn{width:100%;height:100%;-webkit-transition:0.2s filter;transition:0.2s filter;background-size:11px 11px;background-position:center;background-repeat:no-repeat;-webkit-filter:invert(100%);filter:invert(100%);background-image:url(/assets/f0589e86-minimize.svg);}.hWFWeo{width:100%;height:100%;-webkit-transition:0.2s filter;transition:0.2s filter;background-size:11px 11px;background-position:center;background-repeat:no-repeat;-webkit-filter:invert(100%);filter:invert(100%);background-image:url(/assets/76a28e58-maximize.svg);}.OTTWT{width:100%;height:100%;-webkit-transition:0.2s filter;transition:0.2s filter;background-size:11px 11px;background-position:center;background-repeat:no-repeat;-webkit-filter:invert(100%);filter:invert(100%);background-image:url(/assets/db543268-close.svg);} .OTTWT:hover{-webkit-filter:invert(100%);filter:invert(100%);}
-  /* sc-component-id: Buttons-sc-6p582d */
-  .gQQgdl{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:absolute;height:38px;right:0;top:0;z-index:9999;}
-  /* sc-component-id: sc-global-3854079010 */
-  body{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;margin:0;background-color:white;padding:0;width:100vw;height:100vh;overflow:hidden;font-family:Roboto;font-weight:400;-webkit-letter-spacing:0.017857142857142856rem;-moz-letter-spacing:0.017857142857142856rem;-ms-letter-spacing:0.017857142857142856rem;letter-spacing:0.017857142857142856rem;font-size:14px;} *{box-sizing:border-box;}</style>
-  
-  <style>
-    @font-face {
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 400;
-      src: url(/assets/605cca02-roboto-regular.woff2) format('woff2');
-    }
-    @font-face {
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 500;
-      src: url(/assets/faeeee45-roboto-medium.woff2) format('woff2');
-    }
-    @font-face {
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 300;
-      src: url(/assets/edce4706-roboto-light.woff2) format('woff2');
-    }
-    </style>  
-  </head>
-  <body>
-    <div class="StyledOverlay-sc-ltkuoz dPbgLL">
-      <div class="Scrollable-sc-js0a41 cAykgg">
-         <div id="history" class="Content-sc-1ijkbd9 efijXb" style="display: none; transition: opacity 0.15s ease 0s;">
-            <div class="Title-sc-jxyyul zNamw" style="position: absolute; left: 50%; top: 70px; transform: translate(-50%, -50%);">History page hi</div>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Dot</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+      <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="icon" type="image/png" href="src/icon.png" sizes="32x32">
+   </head>
+   <body>
+      <style>
+         .navbar-dropdown.dropdown-right { left: calc(-100% + 4px); }
+      </style>
+      <div id="navblur"></div>
+      <nav style="background-color: #1b1b1b" class="navbar is-spaced">
+         <div class="container has-text-centered">
+            <a href="/">
+               <h1 class="title has-text-centered">
+                     <img src="src/icon.png" style="width: 65px;height: 65px;position: absolute;left: 50%;margin-left: -35px">
+               </h1>
+            </a>
          </div>
-         <div id="overlay" class="Content-sc-1ijkbd9 efijXb">
-            <p align="center" style="margin-bottom: -20px;"><img src="https://raw.githubusercontent.com/EnderAndFireDev/getdot/master/src/icon.png"></p>
-            <div class="StyledSearchBox-sc-13agp0v haFJuh" style="height: 48px;">
-               <div class="InputContainer-sc-11y7un3 ijFNVd">
-                  <div class="SearchIcon-sc-1u0xww WKfmc"></div>
-                  <input placeholder="" class="Input-sc-1r6vfc1 dXebMP">
-               </div>
-               <div class="StyledSuggestions-sc-um3n1t ddRKVk"></div>
-            </div>
-            <div class="Title-sc-jxyyul zNamw" style="margin-bottom: 24px;">
-               Top Sites
-               <div class="DropArrow-sc-1h1v2ga cCAQuV"></div>
-            </div>
-            <div class="Menu-sc-lwimqj kcyIdy">
-               <div class="StyledMenuItem-sc-1pp1ro fgJAng" style="min-width: 124.5px; max-width: 124.5px;">
-                  <div class="Icon-sc-1xpaonh bZLorE" style="background-image: url(&quot;undefined&quot;); background-size: 20px;"></div>
-                  <div class="Title-sc-1ac98t9 gDFUcw" style="-webkit-line-clamp: 1;">Google</div>
-               </div>
-               <div class="StyledMenuItem-sc-1pp1ro fgJAng" style="min-width: 124.5px; max-width: 124.5px;">
-                  <div class="Icon-sc-1xpaonh bZLorE" style="background-image: url(&quot;data:png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAh9QTFRFAAAAXDialVr7YTujWTaVWjeXWTaWWTaVWTaVWTaVWTaWWjeXWTaWWTaUVzWRVzWRVzSRVzSRWDaUWTaWWTaVWTaWVjSQVTOOWTaWWTaVWTaVWTaVWTaWWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVWTaVVzWRVTSOWTaVWTaVWTaVWjeXWTaWWTaWWjeXWTaVWTaVWTaVVzSRVzWSMh5PMBtHLhZHMRZMNhhUNBtTVTSPJxY5KBU0KQ46KQw6Kw48Kg06MBNIVTONWTaVVjSPLxtGNBtEKxEvGwkTLxYcOBwiNBkfOBs/VTOOVjSQMh1KQCVNi2dfUjsuQSceVjYqSSwieldYYT6TKxhBXUFWqIZzmntj3K2M4rKQknJbmHhzakaZWDWVUTpRxJuC3rOQ2rGP/9Oq/9Kp3LOOxJyOaESXWziUkGqMs4mSrol7sYt7tY2Bto2ExJecs4efYT6WWDaVWzeWTzN5JBUwJxUzOiBMOCBKTDF0WjeWWTaWemCIOSk8KBU2Oh9NRC1OeF6EakeNKxwzHBEjJxgzMSA8Z0WJWjaWUzKMHhcqHBsdIB4hJSAuUjOJVDOMIhouNiZRPClaKiMzVDSJPiZkTC59UjGGQCdm////ZZSrxwAAAEp0Uk5TAAAAAAAea67NsnAiBlrO+/zTYwgFefT3hAhb8/dnHs7XJ2v6/Xq+zNjZsMBu+30g0Cpf9fhsBn/2igkHYdP8/WkicrfW17p4JgGsGfhhAAAAAWJLR0S0RAlq3QAAAAlwSFlzAAALEwAACxMBAJqcGAAAARFJREFUGNNjYGBgZGJlY+fg4OTiZmZkAAIWHl4+fi8vb28BQSFhFiBfRFTMx9fPPyDAP1BcQpKFgUVKOig4JDQsPDwiMkpGloVBTj46JjYuPiExKTklNVpBkUFJOTotPSMzKzsnNy8/WkWVgT06OqagsKi4pLSsvKIyWo1BPTo6qKq6prauvqGxqTJag4EjOrq5pbWtvaOzq7unN1qTQSs6Orqvf8LESZOnTAUytRl0dKOjp02fMXPW7DnToqNV9Bj0DYACc+fNX7Bw0eLoaE1DBhYj4+hpS5YuW75i5bRoE1OgS83MLaatWr1m7br100wsrUCesbaxtduwcdNmew0HEB8owuLo5Ozi6ubu4QnkAwBN51BMBE7+0wAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0xMS0wOFQyMDozMToxMyswMDowMGigjg8AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMTEtMDhUMjA6MzE6MTMrMDA6MDAZ/TazAAAARnRFWHRzb2Z0d2FyZQBJbWFnZU1hZ2ljayA2LjcuOC05IDIwMTQtMDUtMTIgUTE2IGh0dHA6Ly93d3cuaW1hZ2VtYWdpY2sub3Jn3IbtAAAAABh0RVh0VGh1bWI6OkRvY3VtZW50OjpQYWdlcwAxp/+7LwAAABh0RVh0VGh1bWI6OkltYWdlOjpoZWlnaHQAMTkyDwByhQAAABd0RVh0VGh1bWI6OkltYWdlOjpXaWR0aAAxOTLTrCEIAAAAGXRFWHRUaHVtYjo6TWltZXR5cGUAaW1hZ2UvcG5nP7JWTgAAABd0RVh0VGh1bWI6Ok1UaW1lADE1NDE3MDkwNzOv+v6nAAAAD3RFWHRUaHVtYjo6U2l6ZQAwQkKUoj7sAAAAVnRFWHRUaHVtYjo6VVJJAGZpbGU6Ly8vbW50bG9nL2Zhdmljb25zLzIwMTgtMTEtMDgvODIyZjQxMWY0Njk5N2U3MDNkMDBjZjc4MzJiZTYwYTguaWNvLnBuZy+9EiQAAAAASUVORK5CYII=&quot;); background-size: 20px;"></div>
-                  <div class="Title-sc-1ac98t9 gDFUcw" style="-webkit-line-clamp: 1;">Ender Bot</div>
-               </div>
-               <div class="StyledMenuItem-sc-1pp1ro fgJAng" style="min-width: 124.5px; max-width: 124.5px;">
-                  <div class="Icon-sc-1xpaonh bZLorE" style="background-image: url(&quot;undefined&quot;); background-size: 20px;"></div>
-                  <div class="Title-sc-1ac98t9 gDFUcw" style="-webkit-line-clamp: 1;">Ender</div>
-               </div>
-               <div class="StyledMenuItem-sc-1pp1ro fgJAng" style="min-width: 124.5px; max-width: 124.5px;">
-                  <div class="Icon-sc-1xpaonh bZLorE" style="background-image: url(&quot;data:png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACRElEQVR4AYXBXWjNcRjA8e/znP/ObItTiBHm9aQmYxfKtlY2aY2ipIVW42IjyrQrbpksF9Qidie3sgslZGuGi6k1ibG2s+2svM3LHGXOzs55fv7YdBrx+QgzmFmhc64OKAPy+GUYaFfVyyLyhDTCFOdctpk1q+pB/sHMWkSkXlW/4RN8zrlsM7ujqiUukSB+8zrxttukokO4lOHlLSezvIKsXVVIMIiZdYpIhap+8/CZWbOqltj7d8RO1JMcjpAuGeknGelnsvsxoaZmVLXUzM4Dh8TMCkWk2yUSjB2uJhUdQoJBsnbvI7ipCFRJdD1i4v49Qo3nCSxZRpqNnnOuTkRI9V7BfY5CIEDo3EUy8guYlpG/npyaOlAlnZnVekAZPklcY3bNc1JfDpCRX8AfVPmLMg/Iw+e+9qLZk2QUbSdd+ZmvzLR5TYDTe2bhW6FMc46fnON/Ekl+84BhYM145kqS8Vc8eP2SnfMrmdZ2Modpp1on6HiRJDckTBlUoB3fwNxq9n8q4mxfFz3ve5mp743xsC/JD5tWeUxp81T1MlC3LnycUPQtH2IjHO04RVW4kuJFhago3aPPaO0ZY9JVEc4NUhwO8IOItAi+VCp1RVVrR8c/cqyzkYHYCH+zOrOYC1vqWRgSzOxSIBA44uETkXozW7sge17p1W1N3Bi4y61oJ5HYCDjIm7OYrUuL2BveQZYnmFmHqjbgE6aYWZZz7oKq1vIPZnZJVRtEJI5PmME5t8HMaoEyYAW/DAJtItKiqk9J8x3Hf+nY61OcSgAAAABJRU5ErkJggg==&quot;); background-size: 20px;"></div>
-                  <div class="Title-sc-1ac98t9 gDFUcw" style="-webkit-line-clamp: 1;">Google</div>
-               </div>
-               <div class="StyledMenuItem-sc-1pp1ro fgJAng" style="min-width: 124.5px; max-width: 124.5px;">
-                  <div class="Icon-sc-1xpaonh bZLorE" style="background-image: url(&quot;data:png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACRElEQVR4AYXBXWjNcRjA8e/znP/ObItTiBHm9aQmYxfKtlY2aY2ipIVW42IjyrQrbpksF9Qidie3sgslZGuGi6k1ibG2s+2svM3LHGXOzs55fv7YdBrx+QgzmFmhc64OKAPy+GUYaFfVyyLyhDTCFOdctpk1q+pB/sHMWkSkXlW/4RN8zrlsM7ujqiUukSB+8zrxttukokO4lOHlLSezvIKsXVVIMIiZdYpIhap+8/CZWbOqltj7d8RO1JMcjpAuGeknGelnsvsxoaZmVLXUzM4Dh8TMCkWk2yUSjB2uJhUdQoJBsnbvI7ipCFRJdD1i4v49Qo3nCSxZRpqNnnOuTkRI9V7BfY5CIEDo3EUy8guYlpG/npyaOlAlnZnVekAZPklcY3bNc1JfDpCRX8AfVPmLMg/Iw+e+9qLZk2QUbSdd+ZmvzLR5TYDTe2bhW6FMc46fnON/Ekl+84BhYM145kqS8Vc8eP2SnfMrmdZ2Modpp1on6HiRJDckTBlUoB3fwNxq9n8q4mxfFz3ve5mp743xsC/JD5tWeUxp81T1MlC3LnycUPQtH2IjHO04RVW4kuJFhago3aPPaO0ZY9JVEc4NUhwO8IOItAi+VCp1RVVrR8c/cqyzkYHYCH+zOrOYC1vqWRgSzOxSIBA44uETkXozW7sge17p1W1N3Bi4y61oJ5HYCDjIm7OYrUuL2BveQZYnmFmHqjbgE6aYWZZz7oKq1vIPZnZJVRtEJI5PmME5t8HMaoEyYAW/DAJtItKiqk9J8x3Hf+nY61OcSgAAAABJRU5ErkJggg==&quot;); background-size: 20px;"></div>
-                  <div class="Title-sc-1ac98t9 gDFUcw" style="-webkit-line-clamp: 1;">Google</div>
-               </div>
-               <div class="StyledMenuItem-sc-1pp1ro fgJAng" style="min-width: 124.5px; max-width: 124.5px;">
-                  <div class="Icon-sc-1xpaonh bZLorE" style="background-image: url(&quot;data:png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAfhUlEQVR42u2de7wkR3Xfv1U9PXMfu6uVdrXSavVCWj2MECAEi3nFIBswxrHAMTYL2OEZx1E+GPwgYOMYx3GC7QTbAcUxdvwxD1sQYgyKeToC2yCRSDxkScFIQgi90Wu1q929e+/MdJ38cXr29p1b1XPvvHp6pr/7aa12erq7uuf8qk+dqjoFFRUVFRWziSm6ANPE/n1Xgj7TGJgDFoD6gKcVYAVYApaBNsBV119R9O1OBZUA+iBj6AvATmA3cCZwNnAucBpwMnACMJ9+V/q4lAEccBQ4CDwI3JXZ7gEeAB5FRVIJY5NUAuhBauygNfnJwDnAE4EnpduZqAgWgWiMRWsBh4GHgG8D3wJuBv4RuBM4ALhKEPlUAvCQGr0FdgAXAJcCzwGejNbuW5jMZ5cAj6MC+BpwPfAN4A7gECCVINYyiT/i2Mm4NHVgF7APeFH69znAVsr5rBzwGHAb8EXgGuCW9LMWVC5TGX/UoZBxbRaBS1CDfybqx58FNIou4wg4gr4d7gT+Hvg06j61ZlUIMyeA1PAj1Hf/IeBlqHtzQtFlGzMC3IsK4ZPAl9BG9ky5STMjgNTw54DvB14BvBit7cfZcJ1Ummjj+WrgKtRlSmZBCFMtgIybcwLwA8BrUFdn1mr7jSJoaPVTwEeAG4BjML1thakUQCaKcxrq5vwM6t8vFF22EnEQ+ALwZ8CX0Ybz1AlhqgSQieacDbw63c5Fe2Yr+mMJuBH4IPBXaL/D1AhhKgSQcXX2AK8CXg+cj74FKoZDC+1b+CPgE8DBaRBB6QWQadz+BPALaGdV1bAdHU3gc8C70Y62dpmFUFoBZPz8S4C3oOHMLUWXa4Z4CPgQ8IdoT3Mp3aLSCSBj+OcDrwTeAJxedLlmFEHDp/8V+Evge1AuIZRKAKnxz6NRnXegnVmluocpJQGuA/4d8LeUyC0qhfFkGrkXAG8HfpIqpDmJPAK8H3gvJXkbTHxjMTX+OtrIvRLtyKrCmpPJAjqsZB863uiei/e8VG6579NFlyvIRL8BUuPfAfwK8CZ0VGZFObgfdVOvYoIH202kADIN3X3ALwOXU4K3VcU6DgEfQBvJt8LkuUQTJ4BMXP+1wDvRzq2KcnML+jb4DBM2yG6iatXU+HcCv4G6PTuKLlPFUNiFtt2WgW9cvOelyaS0CyZGAKnx70Ybuq9l8GwKFZPFAvBctCf56xfveWl7EkRQuAuUCXE+AfhPwMv7KZcxJv8w6ScpQ+fkxT0fLftklk36e6bLaO/xvwcOFO0OFfrTZkZvvhDtRHlmP7fQSpa458DXaCcrYNbfUs3UiGyMz5IMhloUYwLj5gSh2VrBOed5bAIYrAmPubNEWBPl7jc5x5v0TwjBhfUhQqJphLw4SXAkOfsdfvUJUdTgtJOeTBzN00fGlzY6HfPfAv8AxTWOCxNAJtLzU8Dv0mdj12A42jzAdXf8CSutx73GUq/N04jm/Mcbw1xtMWjEgnDk6GFaSdv/sIwlohZ8kJGpEZvw9OLIxESmFtxvTZQrgEQSQgbocLRdM7i/JU0SaeWcu4Xg1n0uCI14K0/f+2oW6tuRvlIeAXAT8K+Aa6EYERQyXDhT8/808F8YQqTHGIs1FuPZQp8bYzFYjDE99uecmx7nH+lm8sveY+u33J3jhsCTgfeh+ZWy7vDYGLsAMjf5EuC30KhPRQEM0CoaJk8F/hh4CoxfBGMVQKbmfynaOVLF+CtAExW8HxXDWEUwNgFkfP7Xpjd71tjusqIM7AM+DPwgjE8EYxFApuZ/JdrgPW0sdzcWJsSRKFnRAlyEegbPgvGIYOQCyNzEi1HjL6h31wQ/1iiL6XGsWfdHD/bvW/e94DaSu9J9prPff+2N/CH3fkbC+cBvMqZKsjb4KTbEOcC7RnlTljQasu6HEayJiKw/Fm8wRCbG2ghflSkCc3aBRJz3eGssNdPwmoNAGiUK9wP06sAz+SaOMVHON6L0vvzEUsfhgmVvSxMniXdvbBeHFQnycRk65/jN+/ddOdLJ9yMTQKbm34328PbRybUJTMiMsjWXb28aTsyp1aypgQkJIKJmwtMTTCrM0d12fk1s8sSHweb4SYILnj8ytb4XPdjQbcF+dN7xu/bvu/LIqEQwahdoFxrnfdmIr9MD6XNfhZ+xPLMa8Gbg14H5UbUHRiKAzNzdd9Ln2J6KCnTm3xXAGwEzChEMXQCZiM/rOwUf6SOqmHbmgV9Fc7sOnVG5QM9JCz0/ovNXzBanAL8I7Bj2W2CoAkgLd3Ja2N1jejgFI8xiO6KAO34JOj12bpgiGJoA0kI1UL//8jE/HI3m4BvMZnoO/LImSjfr3aLj+z0bEXkxdd/w7InB5Mf/O0O5ffccpfc9RiLg59FEaEPrJBtKGDRTmFegvv9Yn4wxRn8YW1sftjMQ2TidD+A5FkMUhYckiwhia9QC/QBlbuLkCdQA1jTw9o0ANTvXMwQ7AuaAf4Mu/Hfd/n1XDjyEepgu0EXoPN5C8nPmTRsx+Qfm/pCr5x1NT+7k4+tB7t3/MELOQCfSnDyMkw0sgLT2X0Qztn1fUU+lb2bPfR8ShT64HwL+JWAHdYUGEkAm5Pk6NHNbRcU4iICfQ0eQDsQwXKCLgLeh/llFxbjYjTaKFwd5C/QtgMz4/v2oX1ZRMW4uR0ca9B0VGvQNsA91fwpHBpmaPTC9hjyXdZt45tHFUfqugPsKg6ZqW0gvPhEdXp04vu+H68T6BVmztzNcudNP4ENFFU4dIiQ4WfbKzwAOcC4szZq1RDZsbNaG4y2S+dt49nU+y4tx5dm5S2JEJiZ3WoinoUNu3rV/35WbXuR70wLIvGr2Az9W9N0rhjiqI24uHV+/iiDUowb1yJeaRDBY6rZBZMP9AC2T4BeBIZEljrrbkEA/QTNJWG4HBCTC9oU5ttcbAQEZGo2YyJjg2y0RCQZkNJbfQ1w5+5eO7qbd3MqEh8oMmjn8C8DfbbZvoN+OsLPQBsgEjfUx3j6d/NleJp3U1WNMfe5eQcQhgbeEkCDSDuwDoU3wZzDpeH7jfwsI6IydnALm3VsnrUp/9z1R7Abeiq5ieWQzB26qDZCp/X+aNJdL6Sm8cuthZoWXrzS8EPhh2FyDuJ9G8PnoGl0lqiAqZoAF+lhEZcMCyKjqNcB5Rd9tRYWHpwMXb+aAzb4BzkZzeVZUTCInoT3EGx4yvSEBdKU2Obfou/QzDmfZFyefQU9QTFdAeaL4UdK8QhthM1GgHaj7M3GBYYOhZmPE+tfUiKMG9UAab2MMNVsPpg8RcZjaYxiO4jN2KyvEGMTzWAzgRHLnBNSiiEaj7s21b41hca5OZMN9FG3n7wA0QOIcK81WMI+/kfxRnXH9ceJ4xXtlGy1ijGMC2Y4Gab60f9+VPdcr7imATO1/GfCMou+uG0GNOLIxEhjzH9s69Sgca4+jeiB1iUGkja0dxHAAvwCEOFAjGqAlFgl0dAkQ1SIa9TgogIVGnZr1Jy/R3D3iXfvDGGi2EpaWV/pdyIKFxmHi6Kh3RoCN2hib9HHWsfASNPP013t9caNtgAXgVeiMrwlGgp/mJ0aR4B4lZ7iAmMGTrkh+uXPPEdg5yII4a08fuu/hnH9EnIpOzuoZEt2oAJ5HmrS0oqIk/BRwQa8v5QogVU+EqqlapLqiTDwB+BHIfwts5A2wF52BU1FRNl6GNoqDBAWQUc0LgTOLvpMiEZHg5tBGqHdfzkC1NZi+do3hvvPuvcCCbZynoZ1jQXpFgbahkw4mNui7igSGBWebktK1bwMY2LplAZHWunCmhhqFZrsdOpTHlpZ5vNnML7cLN8SdE4wJl3R1MNva75h0cKA1pr/2qoHFhTkW5uoeYxcwC7mrY04IW9ARy9eEhkr3EsAzGHVW5wHRDMVC27VIXMsr1bZr0kpWAmFQm/YDeFZDFJhvRLzl9T/O+edsC4zrF0LD/aPIcvUXb+D3/vQTYSNMhKPHVvDK0RhckmADYdRaZNmxdSvW2nWHGwP1yIKTvsKgNrK86VUv4WkXn9e1RGwq7MPwpx9ucPCgTHTqI9R+TwAOep+h78OM+/MiytD4lc6MMAey/tdwIumatz6cHusxEhEwFs7aczIX7D0Zkk0aUi3iq//vjtzx/KAdVj4MQjtJsJ576rztrDFEqythrL28tdSiqC8BRJFlzyk7OPcJp0HSVT4DjzyWENcOAxPZGZZlL3Ah8H98O/PeYfPApUWXfqOMrBISECdqBK6PTVz/IfOcqQwbut8B/XSRvHsrRyMAHR90GfijQXkCOBUNJVVUlJ0XEEjYtk4AGZU8iyrbQ8V08FQCSdtCb4AI9f/Da/9UVJSHncDzYb0bFBLALkrk/w/EMBoPxvi3zAXy+hLC++n6u2sjkxlC1m7A8cb96jnWf2eGeA6esWyhMOj3oZNfSkPHGMLjLnMO7G8nAG3nWFpuer8ZRZZ2krBlYS54pvlajYW45h/SbKARR+vDoGn/WlyLmM8ZLp0kDmdM0NhXWi2arbY3pQo5x5WUJ6OrlN6Z/XCNADKvh6dTUJbnfhAE59q4pO0Zey8kSYu2aXqO0zBi4lqIdevsXRAS0dUSvVjLTbfexTve9xGOLa/QLT8njmddfB4f+J23BMseGZOTusSgth1avRLiWi03b5Bz66NQnWzXf/ixv+HPP/Nl7UfoOrJeq3FoeYUpYjeaxjMsgJQG8OyiS7tZ1CXw9wNITj+Aw+haud7jcowfwBgOHlniuhtv48ixZe9XLjr3DJ75lAtG11nUby1tDIvbFjm07O+lbtQTWomjFIMANsYcatd/nc0d5BPAqUxLypORI72zCIpo3HzSMKZnB9nUmP4qz0Dntix1PvA5j+eiIqiomDb20mXbxwWQ8f8vQhe8qKiYNnYB52Q/8L0BKvenYlpZIO0Q61T43W2AbcATiy7luOkMOfaN+k0SyYuvVpSPp9AZRMx6AeykpMMfBKcTUDxhEYdLE9iuJ44izjv7BBbn18/3F4G5RsTCQm3SJ4FXbJzzUBf/CKwXwGno6LmSIbRdQjuQhbntWrRta918ABFYbMzxhlc+kXPPOMk73t9Yw6k7t5Zp9GNFPnuAEwkI4CxK2wDO6wsOrR+jYcx6HDHXiNYJQNAc+nbCZ3xUbIqTgFOAeyBtBGciQGcz3LWDS8L6iZPZMTYVU8UW4PTOP7LGbugKEVVUTCExmXkuWQHUmZD1vioqRsxxO88KYB6NAs0Qs+3bz/DdHx/omW0Ez6Oz50tK+Od0okODu9156Xw+wKTdQOR19RpFP5YcXM6NbzSlUdnJCiBm4pPf+hHASaLpO7qHzgtceN5OLt57pifMKSzMxWzb0uhPBCLs2bmd113+A6w0W+t2Oyc875ILi348waf2/Rfv5Y0vf4E3ylWLIs7evXPqowD9rhI5WYjgpI2T1rrh0IkTnnvpGfzsK55HkricU/TxQzvHhWft5g9+6WdyvzaRrobAT1y2j3922b78ck/iSNYhMh0C2ACjNMKJNPAZKPswmMGYf0XFKpUAKmaaSgAVM00lgIqZZmoawUniaHsmcTvn+l4krmL6Kb0ABNi2ZY43vPw5xLWmt7Pr6RedldvpUzG7lF8AImxbnOd1L3s2J27zJ3NyTgK5/StmndILoEM7cbSTqctmVjFiqkZwxUxTCaBipqkEUDHTTE0bwBpGkn/TGrSasGbqR0ZumF7pIEtEtwBKeVuJg0cfg1Zr8HNl0ezRsNJsEdfafY2PN5n/9oPpcazklMpgwETDfSjpMzlwyGnOpJKTFYADkqILtFmMgcOH4QMfMdhRyFcS7nroUzyycl/AGAUnSdAQG9ECi/XwPKPIRFgbfhFbEwVFIDia7WXvtUUc2+b3cOr2SxhFveaccOToxC+R2pPsk18GDhddoH5wTkUwmpML9zzwEPctfRfraTIJjiTx5yMShIV4K9vmdgRPX7MxkQ2vRBXZWlAADsdy66iu5ui59o7FBRr0mLI2AGU3flgrgCXgQNEF6peR/RimsxavxXhWRhcBCazQIgjWWs8CFKvofpOz34TdIDFYaxDxlcvpsVNgpCPguLOcfXIrwPeKLllFxRh4uPM/WQEkwHeLLlnF8Ch/E3UkODJ23v3uvKvo0lVUjJhjpGkRIRVAZ70kVABTtTLaYKw60KOqTaXXmatqfNgcBB7o/KM7/nYPcAhdSWNmcNL2zhkwBsS1ESTcCMbgjD9zgkEwxmJNuBEcmQgbjNUbrI1y+gIM1kT+MKgxGITENQlhTc17T1POg8AjnX/UPDsfYIYEIJLw0MEbOdY+6DU0EceKLDFf24Ivnu5IsC7y1tSC0IgXmI/DK87GUYPYNvBX9YbIxlhjvEudJpJgjU3DoOuXh222D3HbA5/xCsQYyxkn7WPr3O7eb6Hp4jvA451/dAvgMeBWdBWN2UCg3T5Cs3kI44kZOhGEJFhTGrFpj6v/9BaTW8saY9Pr+k5gsOl+4z23YI0l9P5JXJtjrcN+AWBJXCt9zc2UAG4GjnfcdAugDXyz6BKOl3RNgYARmkJrx97X7vWNkPtkZrOD4Lh9d9q9x6umTEP4FjIdBRUzaSjTymPA7dkPfO/mW4FHiy5pRcUIuItMCBT8AribLpXMNjPlH087N6Jh0OP4BPA4cH3RJR0nIoI4/+ZE0jZiSAj5AilaPk4E59zxxAC6Oc2kPVs44DrAZdz9tY3gq66/orNe2PVoOyDexAVKibGGHadsZ6vxDzpzztG89wjJUjs4sCwKDGcWkdw+gONlMCYUBd1AEyS0OKBQb8SccOou70hBg2HONmYpZ9Kj6BtgDaGB6P+A9gmczpQT1SL2Pf9JLJzs6B5VbAw0V9p86qOPc//dLe+oThEhyqknYlvPvb52lEVBQzeYYMTGpOs9i2fIszhh564TecHL9xHH639mcXD7tTUO3lf+Mf0b5Hbgzu4PQwK4G40GTb0ADFCLI+K69QhA06wYa8mxUIzkWFAP6+ppewMYpzWGer1GXI/X1vRGBWCtCa8sO338X7r8fwhPij8GXFN0icdFyMWXXusflQARz+If3WvBTj/H7Tnr/4NHAJkv/C2ZMRPTi+k577ai9NwOfM23I6+F9m103ERFRdm5Fm3TriNPAIeB24ouedHMjpcwtawA/xuQbvcH8gWQAH9DZuDQtDJb7vDqPc8I3yWnX8sbBcr0B3wBHRpxUdF3MSqsgb0nGE7eadYtiGiMYXnZ8DnbopWsYH2TzxEEFzQokxiaJtBPsPotQiZpXRQazkYibZbbx7xZIZwTYrvCE3cY5hprkwYbNJfS/XXDo0x9EOhmAu4P9M4Mdy/wOaZcAGduM5x5ok8AcPSYoR61aSVNIkICCNenbcIC0OvbnAkxpEOh/SaaSJtmsuwVQOIcsW1y3nZYmOvKmm0gSeDaqe/mJAE+S87gzqALlPGX/heZCQTTiPTYgBFWk736CUyfx+pA7s6K72s2mZkpAN9BvRh8/j9sLDnu14Abir6Tioo++Dw9Mp1sRACHgf9JCdMmVsw0h4C/JBD96ZArgMyBnwRuKvqOKio2weeBr/T60kZTAjyAvgVmkJI7y2aTn08Hx4CrgOW82h82IIDMCT7OlGaOSxJI2ka3ZHVrp//uf0hQr4OyJ/Y3v/MzNkjX3137JHNfbVa3RP+e4obwDehQnp5sZoGM21BX6OeLvrth0mwLV3/GMDfnWWDPgEtiHn64RpsmznnqC8nrBUgnpEh48kniEtrB3D0mzQ5tA+duB7NDO3E88CB86KMRkU1vZk254b6HpnIodBv4c3T+b082JIC0Y8wBfwG8GthZ9F0OC+fgznvzZkcJS8sGkTaOyLNX8ieVOMnxNkTH+ueEF2KpB9OqJNKm7Vr+9OjiOLok3H5nuJPNjGhVnYL5KnA1hEOfWTabFuwm4ItF3+GwsTZ/UyPp11L6jeN39pucvT16CQxYKz3ua6pYAd7HJrKcb1YAy8B/Z8o7xipKyx2kFfRGan/YhAAyJ/x74NNF32lFhYf/Ady/mQM29QZIRXAM+CNmJnfQ9PkJU8o3gQ/Bxmt/6H+d4Gs7F5t+yhwrnBnxrgDvpY8JXJsWQKquFvAHzFDvsOQPlQseZYwcj7b4Nm3nSnDTIGt4O95ODm2zIYLPoqHPTdX+MNhC2d9FVXclUB/gPBNP2yzTtEfX5fjRhAoGYwMLqArEc3MsLMZBO3RJgnNHvfsEWFpZwSXOe7w1hvq2ujdtioghnlst5RTzMPD79LnCaV8uUEZlH0PHXEw1DoejjSNZswkJYtpgHOLbbIKJhKhuiGL/ZmNBosS/2TZtVmizTFtWurZl2jSxNfxbPJI1sieRDwFfgs3X/tB/G6DDIeC/oUusTi19Z/YZQvPBBPsCprpW3yg3oR5I0o/xwwAC6EqfclXRT6IixNQKZRn4XQbMXDLQGyAVwVHgP6LpFCsqxsXn0NmKfbk+HYa1QtodqAj6aohUjIqprf3vBv4D6oIPxMACyKjvE8AHinwqFTPBCur6XA+D1f4wpDdAWohOwa4t9PEUgDHGu3WySXfy8fs2EQkeP6PrePXiY8CfweDGD4P1A/i4G3gr8EHgwjE/mEIwxhDH4fwizjmOHDkS3N9oNKjX/d0oHXH0T5l7sb1cA/wqcGQYxg/DawNk1XgD2jExEwvt5dXeHeMt7g0wVW+Q7wC/glayQ2Ooy4RnRPARZnYOccUIaKOV6lD8/ixDFUCmcIeAX2PG1hqbPKYm6+nHgQ/DcI0fRiCADHcAv5z+XVHRL19G/f7Hhm38MCIBdE2e+Rd41maqqNgAX0Ht59ujusDI3gAZEXwBeBslXm0mNzGJ5E+KX80e7dkkf6izTnbvsQxr6Nrl93y+BbwF+EcYvuvTYdhh0DVk0qx/HM0w/WtA6cYoWmuJosibniSKIt3nG5KMsD3ew/bGOcFz12o1ajX/z+BcQiu+gSU56D2/tZY4jgPXdkRRREkjQfehxj/0Rm83IxVAp/BpSpXfB84AXsdo2x5DJ7KWWhRhPOOLoyiiVqsFjXDH/Nmcue0Ffa3H66TFw/U7aHHEKz5rLfV6PXjtWjTyn3cULAO/g471Ganxw5gMMRMZegfaSTYTfQTQcZFcz5ldwRlf/bpAPY+cSA4Dvw38MYze+GGMNXF6Mw8Db0Znks2MCCo2RKeC/C3g2DiMH8bsiqQ3dRh4F5rAqBJBBajxvxPNNtIal/FDAb54lwiuopRv6nJQkubvIeDt6MzC9jiNHwpqjKY3+TjaUfZBqsU3ZpUltMH7JxRg/FBgNCa92YeAXwDezQaz+RaFBD8ddMTmYCUyxpSmqu/iLuAXgfdQkPHDGMKgeaQh0gPAr6MdHu8GTi+yTD4iaRC7xXVpUQDECcuJvykjktC2g7zcDPVkkUayzZ8iPRGWDjbxydPhmJ9vTWrCmhvROP/fwXiiPSEKDxSnIkjQxEYHUF/wzKLLtYohkjqxm/ekKTckrsVS6zBeI5SE9lz/AjBA7BapJ9s8eaD12kdWHgmsD5Cw1bXgxKKf3xoEHRnwVnT93kKNHyakQyrzED6Ljv24uegybYzUDRnpFSS4J+/aBjNp6c8F7dx6IxNi/DAhAoDjD6PzkF4FfApwg5yzaEzmvzPOMvB+4A2ky2xNgvHDBAkA1jyUW9AhE29jyDOAKsbOjcCb0Abv/Vddf8XEGD9MmABARZDpNf7PwGspjUtUkSEBPgr8JDqZ5egkGX6HiRNAh8zD+iL6EP8CzTwxUUhPL304V9nsHim2f/EQGt68Arh90mr9LIVHgfLoPLT9+678FvCzwHXALwFnj7McBos1EdbYNWZlMIgRIlPDZ4raEB2sjrFYLNnh1qttis61HYknRmQw4x95LqjL85vAXzPmYQ39UJoWWjqvwACXoMMofhiIBzjlhlleOUCrveRdVU7E4URDnR0JmOP7hPn6Ccw1TurzysLKymMkgWVUBSFxrcB6v0JcW2RhbmwLeh5EXZ33kM4AnHTjhxIJoEMqhJOAHwX+NXApI3blDP2vJyr9r7K9evXQSqe9FsAQGYcr1ETz9bwHnQLbLIPhdyidAOC4CAD2oBGGN6b/XzE+BO29fy+aBucglKPWz1JKAXRIhWBRt+jtwD8FGkWXawZ4CE1P+H7SrB9lM/wOpRZAh1QI24AfA34OeAZjah/MGEvoUIbfQ8fx9L0wxaQwFQKANW7RycCPo/0HTwHmiy5byRF0pO716LDlz5OmwS+78cMUCaBDRggnAc8HXg/8E2Br0WUrIY8An0RdnW8CR2A6DL/D1AmgQ0YIW4DnAq8BXgjsKrpsE45Dh59cjXY+foOSRXY2w9QKIEsqhjrqEv1z4EeAs5jgnvACaKFRnQ+jtf4dTIGP34uZEECHVAgR8ATgxcDlaIN5e9FlKwgBHkQXNfkrdNjJA4BMu+F3mCkBdOhyj56GNpovAc4FTqWE2es2QRO4F823eQ06B+NW0nFWs2L4HWZSAFkyfQnz6Ey0ZwMvAp6FimEawqnLqEvzZTSMeT3wPdToZ6a29zHzAsiSeTM00DbCJaggLgUuQCNLZWg3NFHX5lbU2L8CfB01ejfLBt9NJYAcMgPwtqHu0VPT7UloO2IX+uYo8jk6NC7/IFrL3wx8FV23+V6082rmXJuNUglgE2QEsYAa/7nA+cBeVBCnA6eggplH3adhPGOHRmmOop1SDwH3oOtm3YqmEr8HeBR1dyqD3yCVAAYk4zbFaKP6JGAn2iPd+XtHum8z7lOCDjB7FO2QegQ1/IfRCSdL6NpZlbFXVFRUVFRsmv8POHZz6s16MHoAAAAASUVORK5CYII=&quot;); background-size: 20px;"></div>
-                  <div class="Title-sc-1ac98t9 gDFUcw" style="-webkit-line-clamp: 1;">Ender Bot</div>
-               </div>
-            </div>
-            <div class="Title-sc-jxyyul zNamw">Overview</div>
-            <div class="Section-sc-1a43ipo jPAMAW">
-               <div class="HeaderText-sc-ellgec kgLgFt">Tab groups</div>
-               <div class="StyledTabGroups-sc-1i4mp80 hEIijT">
-                  <div class="StyledTabGroup-sc-rcou9y ezqEOT" style="background-color: rgb(63, 81, 181);">
-                     <div class="Content-sc-xs0zuy eGmQLJ">New group</div>
-                     <div class="Icons-sc-sp1y2z jjbHsB">
-                        <div class="Icon-sc-1ieklpg fRabqY" style="background-image: url(&quot;/assets/83e86d32-edit.svg&quot;);"></div>
-                        <div class="Icon-sc-1ieklpg fRabqY" style="background-image: url(&quot;/assets/82be3518-close.svg&quot;);"></div>
-                     </div>
-                  </div>
-                  <div class="AddTabGroup-sc-19tm398 kXxLLW"></div>
-               </div>
-            </div>
-            <div class="Section-sc-1a43ipo jPAMAW">
-               <div class="HeaderText-sc-ellgec kgLgFt">Menu</div>
-               <div class="Menu-sc-lwimqj kcyIdy">
-                  <div class="StyledMenuItem-sc-1pp1ro fgJAng" style="min-width: 106.571px; max-width: 106.571px;">
-                     <div class="Icon-sc-1xpaonh cjLhal" style="background-image: url(&quot;/assets/359f288c-history.svg&quot;); background-size: 24px;"></div>
-                     <div class="Title-sc-1ac98t9 gDFUcw" style="-webkit-line-clamp: 2;">History</div>
-                  </div>
-                  <div class="StyledMenuItem-sc-1pp1ro fgJAng" style="min-width: 106.571px; max-width: 106.571px;">
-                     <div class="Icon-sc-1xpaonh cjLhal" style="background-image: url(&quot;/assets/d945a01-bookmarks.svg&quot;); background-size: 24px;"></div>
-                     <div class="Title-sc-1ac98t9 gDFUcw" style="-webkit-line-clamp: 2;">Bookmarks</div>
-                  </div>
-                  <div class="StyledMenuItem-sc-1pp1ro fgJAng" style="min-width: 106.571px; max-width: 106.571px;">
-                     <div class="Icon-sc-1xpaonh cjLhal" style="background-image: url(&quot;/assets/b5fed3a-download.svg&quot;); background-size: 24px;"></div>
-                     <div class="Title-sc-1ac98t9 gDFUcw" style="-webkit-line-clamp: 2;">Downloads</div>
-                  </div>
-                  <div class="StyledMenuItem-sc-1pp1ro fgJAng" style="min-width: 106.571px; max-width: 106.571px;">
-                     <div class="Icon-sc-1xpaonh cjLhal" style="background-image: url(&quot;/assets/71285f0b-settings.svg&quot;); background-size: 24px;"></div>
-                     <div class="Title-sc-1ac98t9 gDFUcw" style="-webkit-line-clamp: 2;">Settings</div>
-                  </div>
-                  <div class="StyledMenuItem-sc-1pp1ro fgJAng" style="min-width: 106.571px; max-width: 106.571px;">
-                     <div class="Icon-sc-1xpaonh cjLhal" style="background-image: url(&quot;/assets/6df03524-extensions.svg&quot;); background-size: 24px;"></div>
-                     <div class="Title-sc-1ac98t9 gDFUcw" style="-webkit-line-clamp: 2;">Extensions</div>
-                  </div>
-                  <div class="StyledMenuItem-sc-1pp1ro fgJAng" style="min-width: 106.571px; max-width: 106.571px;">
-                     <div class="Icon-sc-1xpaonh cjLhal" style="background-image: url(&quot;/assets/c79fe6b-find.svg&quot;); background-size: 24px;"></div>
-                     <div class="Title-sc-1ac98t9 gDFUcw" style="-webkit-line-clamp: 2;">Find</div>
-                  </div>
-                  <div class="StyledMenuItem-sc-1pp1ro fgJAng" style="min-width: 106.571px; max-width: 106.571px;">
-                     <div class="Icon-sc-1xpaonh cjLhal" style="background-image: url(&quot;/assets/6beea55b-more.svg&quot;); background-size: 24px;"></div>
-                     <div class="Title-sc-1ac98t9 gDFUcw" style="-webkit-line-clamp: 2;">More tools</div>
-                  </div>
-               </div>
-            </div>
-            <div class="Title-sc-jxyyul zNamw">News</div>
-            <div class="Card-sc-1q9oyxq igUhGl">
-               <div class="WeatherHeader-sc-l81d4o bLjmqu">
-                  <div class="WeatherLeft-sc-cjh1go fNlgaY">
-                     <div class="WeatherTitle-sc-pxzfpk dddvMg">Warsaw</div>
-                     <div class="WeatherNumber-sc-werc0f cYuwjj">
-                        20
-                        <div class="WeatherSymbol-sc-1mr4l9c eXwUYJ">°C</div>
-                     </div>
-                  </div>
-                  <div style="display: flex; flex-flow: column; align-items: center; justify-content: center;">
-                     <div class="WeatherIcon-sc-87kukj jOzQyy" style="background-image: url(&quot;/assets/de345c59-few-clouds.png&quot;);"></div>
-                  </div>
-               </div>
-               <div class="WeatherContent-sc-75nrf9 ciZAsM">More info</div>
+      </nav>
+      <style>
+         img {
+            -webkit-user-drag: none;
+         -khtml-user-drag: none;
+         -moz-user-drag: none;
+         -o-user-drag: none;
+         user-drag: none;
+         }
+
+         i {
+            user-select: none;
+         }
+
+         .is-y-pump:hover {
+         box-shadow: 0 1rem 2rem 0 rgba(10,10,10,.1);
+         transform: translateY(-.25rem);
+         -webkit-transform: translateY(-.25rem);
+         background-color: rgb(235, 77, 75);
+         color: #fff;
+         }
+         .is-y-pump {
+         border: none;
+         box-shadow: 0 .5rem 1rem 0 rgba(10,10,10,.2);
+         flex-grow: 0;
+         flex-shrink: 0;
+         font-weight: 600;
+         height: auto;
+         padding: .5em 1em;
+         transition-duration: 172ms;
+         transition-property: box-shadow,-webkit-transform;
+         transition-property: box-shadow,transform;
+         transition-property: box-shadow,transform,-webkit-transform;
+         will-change: box-shadow,transform;
+         color: #fff;
+         }
+         .is-y-pump-g:hover {
+         box-shadow: 0 1rem 2rem 0 rgba(10,10,10,.1);
+         transform: translateY(-.25rem);
+         -webkit-transform: translateY(-.25rem);
+         background-color: rgb(46, 204, 113);
+         color: #fff;
+         }
+         .is-y-pump-g {
+         border: none;
+         box-shadow: 0 .5rem 1rem 0 rgba(10,10,10,.2);
+         flex-grow: 0;
+         flex-shrink: 0;
+         font-weight: 600;
+         height: auto;
+         padding: .5em 1em;
+         transition-duration: 172ms;
+         transition-property: box-shadow,-webkit-transform;
+         transition-property: box-shadow,transform;
+         transition-property: box-shadow,transform,-webkit-transform;
+         will-change: box-shadow,transform;
+         color: #fff;
+         }
+         .is-i-pump:hover {
+         box-shadow: 0 1rem 2rem 0 rgba(10,10,10,.1);
+         transform: translateY(-.25rem);
+         -webkit-transform: translateY(-.25rem);
+         color: #262626;
+         }
+         .is-i-pump {
+         border: none;
+         box-shadow: 0 .5rem 1rem 0 rgba(10,10,10,.2);
+         flex-grow: 0;
+         flex-shrink: 0;
+         font-weight: 600;
+         height: auto;
+         padding: .5em 1em;
+         transition-duration: 172ms;
+         transition-property: box-shadow,-webkit-transform;
+         transition-property: box-shadow,transform;
+         transition-property: box-shadow,transform,-webkit-transform;
+         will-change: box-shadow,transform;
+         color: #262626;
+         }
+         .is-b-pump:hover {
+         box-shadow: 0 1rem 2rem 0 rgba(10,10,10,.1);
+         transform: translateY(-.25rem);
+         -webkit-transform: translateY(-.25rem);
+         color: #fff;
+         }
+         .is-b-pump {
+         border: none;
+         box-shadow: 0 .5rem 1rem 0 rgba(10,10,10,.2);
+         flex-grow: 0;
+         flex-shrink: 0;
+         font-weight: 600;
+         transition-duration: 172ms;
+         transition-property: box-shadow,-webkit-transform;
+         transition-property: box-shadow,transform;
+         transition-property: box-shadow,transform,-webkit-transform;
+         will-change: box-shadow,transform;
+         color: #fff;
+         }
+         .ieb-title {
+         align: left; 
+         font-weight: 300; 
+         line-height: 1.375;
+         font-size: 40;
+         color: #ecf0f1;
+         }
+         .ieb-title strong {
+         font-weight: 600; 
+         }
+         .wb-title {
+         font-weight: 200; 
+         line-height: 1.375;
+         font-size: 40;
+         }
+         .wb-title strong {
+         font-weight: 600; 
+         }
+         #btm-section {
+         background-image: url(img/86af5744fb2547a90b24aadaaeaddefe.svg);
+         background-attachment: fixed;
+         }
+         #btm-section::after {
+         background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHByZXNlcnZlQXNwZWN0UmF0aW89J25vbmUnIHZpZXdCb3g9JzAgMCAxMDAgMTAwJyBmaWxsPSdyZ2IoMjA3LDM2LDE2KScgZmlsbC1vcGFjaXR5PScxJz48cG9seWdvbiBwb2ludHM9JzAsMCAxMDAsMCAwLDEwMCc+PC9wb2x5Z29uPjwvc3ZnPg==);
+         background-position: center center;
+         background-repeat: no-repeat;
+         background-size: 100% 100%;
+         content: '';
+         height: 100px;
+         left: 0;
+         position: absolute;
+         right: 0;
+         width: 100%;
+         z-index: 1;
+         filter: brightness(0) invert(1);
+         }
+      </style>
+      <section id="main" style=" z-index: 9; background-position-y: 699px; height: 100%;background-color: #1b1b1b;background-attachment: fixed; position: relative;text-shadow: 0px 0px 1px rgba(0,0,0,0.5);clip-path: polygon(0 0, 9000px 0, 9000px 47%, 0 100%);margin-top: -95px;" class="hero is-purple is-large">
+         <div style="" class="container">
+            <div class="hero-body has-text-centered" style="padding: calc(70px + 15%) 30px">
+               <h1 class="title ieb-title" >
+                  <strong style="font-size: 56px">Introducing Dot,</strong><br>
+                  <strong>A</strong> light-weight <strong>browser,</strong><br> built for the <strong>future</strong>.
+               </h1>
             </div>
          </div>
+         <span style="display: none">Made by Ender#0002, no stealing!</span>
+      </section>
+      <br>
+      <section class="section has-text-centered">
+         <div class="container">
+            <h1 class="title ieb-title" style="color: #000"><strong>What do you get in Dot?</strong></h1>
+            <p class="subtitle">We provide a browser which doesn't track you and keeps your online footprint safe.</p>
+            <div class="columns is-multiline">
+               <div class="column is-one-third">
+                  <article class="notification media has-background-white">
+                     <figure class="media-left">
+                        <span class="icon">
+                           <i class="material-icons h1 has-text-warning" style="font-size: 35px">
+                                 security
+                           </i>
+                        </span>
+                     </figure>
+                     <div class="media-content">
+                        <div class="content">
+                           <h1 class="title is-size-4">Forget ads and trackers.</h1>
+                           <p class="subtitle is-size-5">It sucks to install an ad-blocker manually. With our Dot Ad-Blocker, you'll never see a pesky ad again.</p>
+                        </div>
+                     </div>
+                  </article>
+               </div>
+               <div class="column is-one-third">
+                  <article class="notification has-background-white media">
+                     <figure class="media-left">
+                        <span class="icon">
+                           <i class="material-icons h1 has-text-success" style="font-size: 35px">
+                                 offline_bolt
+                           </i>
+                        </span>
+                     </figure>
+                     <div class="media-content">
+                        <div class="content">
+                           <h1 class="title is-size-4">Fast & Reliable.</h1>
+                           <p class="is-size-5 subtitle">We make sure Dot is as fast as it should be, no bloat-ware or memory hoggers.</p>
+                        </div>
+                     </div>
+                  </article>
+               </div>
+               <div class="column is-one-third">
+                  <article class="notification has-background-white media">
+                        <figure class="media-left">
+                           <span class="icon">
+                              <i class="material-icons h1 has-text-info" style="font-size: 35px">
+                                    dashboard
+                              </i>
+                           </span>
+                        </figure>
+                        <div class="media-content">
+                           <div class="content">
+                              <h1 class="title is-size-4">A home screen from the future.</h1>
+                              <p class="is-size-5 subtitle">It's all here, history, bookmarks, settings and even the weather.</p>
+                           </div>
+                        </div>
+                     </article>
+               </div>
+               <div class="column is-one-third">
+                  <article class="notification has-background-white media">
+                        <figure class="media-left">
+                           <span class="icon">
+                              <i class="material-icons h1 has-text-primary" style="font-size: 35px">
+                                    sort
+                              </i>
+                           </span>
+                        </figure>
+                        <div class="media-content">
+                           <div class="content">
+                              <h1 class="title is-size-4">Organize like a pro.</h1>
+                              <p class="is-size-5 subtitle">Sort your tabs into tab groups, just like a neat bookshelf.</p>
+                           </div>
+                        </div>
+                     </article>
+               </div>
+               <div class="column is-one-third">
+                  <article class="notification has-background-white media">
+                        <figure class="media-left">
+                           <span class="icon">
+                              <i class="material-icons h1 has-text-dark" style="font-size: 35px">
+                                    devices
+                              </i>
+                           </span>
+                        </figure>
+                        <div class="media-content">
+                           <div class="content">
+                              <h1 class="title is-size-4">Sync with your Dot account.</h1>
+                              <p class="is-size-5 subtitle">Keep all your bookmarks, history and settings saved in one click.</p>
+                           </div>
+                        </div>
+                     </article>
+               </div>
+               <div class="column is-one-third">
+                  <article class="notification has-background-white media">
+                        <figure class="media-left">
+                           <span class="icon">
+                              <i class="material-icons h1 has-text-danger" style="font-size: 35px">
+                                    style
+                              </i>
+                           </span>
+                        </figure>
+                        <div class="media-content">
+                           <div class="content">
+                              <h1 class="title is-size-4">Simplistic UI</h1>
+                              <p class="is-size-5 subtitle">Dot uses Material Design to keep everything compact and simple, just how you like it.</p>
+                           </div>
+                        </div>
+                     </article>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section id="btm-section" style="background-color: #1b1b1b; background-attachment: fixed; position: relative;text-shadow: 0px 0px 1px rgba(0,0,0,0.5);" class="hero is-large has-text-centered">
+         <div class="container">
+            <div class="hero-body" style="margin-top: -150px;">
+               <h1 class="title ieb-title">Download <strong>Dot</strong> today</h1>
+               <br>
+               <a class="button is-outlined is-light is-large" style="border-radius: 0%">Download</a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <br>
+      <footer class="footer" style="background-color: #fff; color: #000; font-weight: 50; margin-top:-50px">
+         <div class="content has-text-centered">
+            <p class="wb-title" style="font-size: 25;">
+               <strong style="color: #000;">Dot was created by Ender And Fire Development.<br><small> All rights reserved. © 2019</small>
+            </p>
+            <a href="https://bulma.io"><img src="https://bulma.io/images/made-with-bulma--black.png" alt="Made with Bulma.io" width="200"></a>
+         </div>
+      </footer>
       </div>
-   </div>
-  </body>
+   </body>
 </html>
