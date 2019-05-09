@@ -318,18 +318,10 @@
 
          document.getElementById("download").onclick = function(e) {
 
-            if(window.navigator.platform == "Win32") {
                setTimeout(a => {
                   window.location.replace("thanks.html")
                }, 10)
-               
-            }
-            else if(window.navigator.platform.startsWith("Mac")) {
-               return alert("Dot isn't available for your OS yet. Sorry.")
-            }
-            else {
-               return alert("Dot isn't available for your OS yet. Sorry.")
-            }
+
          }
       </script>
    </body>
