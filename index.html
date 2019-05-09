@@ -287,7 +287,7 @@
                ">
                <h1 class="title ieb-title">Download <strong>Dot</strong> today</h1>
                <br>
-               <a class="button is-outlined is-light is-large" style="border-radius: 0%; transition: all 0.3s">Download</a>
+               <a class="button is-outlined is-light is-large" style="border-radius: 0%; transition: all 0.3s" id="download">Download</a>
             </div>
          </div>
       </section>
@@ -301,5 +301,36 @@
          </div>
       </footer>
       </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script>
+
+         if(window.navigator.platform == "Win32") {
+            document.getElementById("download").innerText = "Download for Windows"
+         }
+         else if(window.navigator.platform.startsWith("Mac")) {
+            document.getElementById("download").innerText = "Download for MacOS"
+            document.getElementById("download").disabled = true;
+         }
+         else {
+            document.getElementById("download").innerText = "Download for Linux"
+            document.getElementById("download").disabled = true;
+         }
+
+         document.getElementById("download").onclick = function(e) {
+
+            if(window.navigator.platform == "Win32") {
+               setTimeout(a => {
+                  window.location.replace("thanks.html")
+               }, 10)
+               
+            }
+            else if(window.navigator.platform.startsWith("Mac")) {
+               return alert("Dot isn't available for your OS yet. Sorry.")
+            }
+            else {
+               return alert("Dot isn't available for your OS yet. Sorry.")
+            }
+         }
+      </script>
    </body>
 </html>
