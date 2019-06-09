@@ -1,4 +1,7 @@
-// Feel free to open a pull request. Add any domain which is linked to an IP grabber and provide proof it belongs to a IP tracking service.
+/*
+  Feel free to open a pull request. 
+  Add any domain which is linked to an IP grabber and provide proof it belongs to a IP tracking service.
+*/
 
 [
   "grabify.link",
