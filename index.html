@@ -319,15 +319,13 @@
          document.getElementById("download").onclick = function(e) {
 
             if(window.navigator.platform == "Win32") {
-               setTimeout(a => {
-                  window.location.replace("thanks")
-               }, 10)
+               window.location.replace("https://dot.ender.site/api/v2/download/win32")
             }
             else if(window.navigator.platform.startsWith("Mac")) {
-               return alert("Dot isn't available for your OS yet. Sorry.")
+               window.location.replace("https://dot.ender.site/api/v2/download/darwin")
             }
             else {
-               return alert("Dot isn't available for your OS yet. Sorry.")
+               window.location.replace("https://dot.ender.site/api/v2/download/linux")
             }
          }
       </script>
